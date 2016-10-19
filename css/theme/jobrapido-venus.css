@@ -64,6 +64,12 @@ body {
     font-weight: 100;
 }
 
+.reveal .slide-number {
+    bottom: 15px;
+    left: 5px;
+    right: auto;
+}
+
 
 /*********************************************
  * HEADERS
