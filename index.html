@@ -37,8 +37,17 @@
         <div class="slides">
             <!-- SECTION TO MANAGE SLIDE -->
             <section>
-                <h1>Jobrapido</h1>
-                <h2>Say hello to Yarn</h2>
+                <h2>Npm vs. campaign manager</h2>
+                <h1>Say Hello to Yarn</h1>
+            </section>
+            <section>
+                <h4>Use case</h4>
+                <div class="col-6">
+                    <img src="lib/img/campaign-manager-packages.png" alt="">
+                </div>
+                <div class="col-6">
+                    <img src="lib/img/screen-campaign-manager.png" alt="">
+                </div>
             </section>
             <section>
                 <h4>Cosa sono i package manager?</h4>
@@ -47,13 +56,13 @@
                 </cite>
                 <div class="image-container">
                     <img class="fragment" data-fragment-index="1" width="75" src="lib/img/battle.jpg">
-                    <img class="fragment" data-fragment-index="2" width="75" src="lib/img/bower.png">
-                    <img class="fragment" data-fragment-index="3" width="75" src="lib/img/component.png">
-                    <img class="fragment" data-fragment-index="8" width="75" src="lib/img/npm.png">
-                    <img class="fragment" data-fragment-index="4" width="150" src="lib/img/duo.png">
-                    <img class="fragment" data-fragment-index="5" width="75" src="lib/img/jspm.png">
-                    <img class="fragment" data-fragment-index="6" width="75" src="lib/img/gem.ico">
-                    <img class="fragment" data-fragment-index="7" width="75" src="lib/img/pip.png">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/bower.png">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/component.png">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/npm.png">
+                    <img class="fragment" data-fragment-index="1" width="150" src="lib/img/duo.png">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/jspm.png">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/gem.ico">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/pip.png">
                 </div>
             </section>
             <section>
@@ -96,6 +105,23 @@
                 </div>
             </section>
             <section>
+                <h4>Yarn</h4>
+                <p>
+                    Per ovviare agli attuali problemi di npm, i colossi della tecnologia (Facebook e Google) hanno deciso di collaborare e creare un nuovo package manager chiamato Yarn.
+                </p>
+                <p>
+                    La svolta principale di Yarn è proprio la sua capacità di catalogare e installare le dipendenze secondo uno schema di versioning semantico <em>SEMVER</em> che permette di definire uno schema di controllo delle versioni che riflette i tipi di modifiche in ogni nuova versione (es. se una modifica rompe una API, aggiunge una feature o corregge un bug).
+                </p>
+                <p class="fragment">
+                    P.S. La leggenda narra che il nome "YARN" derivi dall'onomatopea dell'urlo che ha cacciato lo sviluppatore di Facebook dopo l'ennesimo problema derivato dai problemi dalle sottodipendenze dei moduli npm.
+                    <br>
+                    <img height="150px" src="lib/img/monkey-pc-1.gif" alt="">
+                </p>
+            </section>
+            <section>
+                <p>
+                    Lo scopo di Yarn non è quello di sostituire Npm, bensì di migliorarlo.
+                </p>
                 <div class="col-6">
                     <h4>vanilla NPM</h4>
                     <ul>
@@ -127,22 +153,46 @@
                 </div>
             </section>
             <section>
+                <h4>Come installarlo?</h4>
+                <pre>
+                    <code>Npm install -g Yarn</code>
+                </pre>
+                <cite class="fragment">
+                    "Npm install Yarn" is like getting your ex-girlfriend to move your new girlfriend's stuff into your house.
+                </cite>
+                <br>
+                <div class="fragment">
+                    <h4>Come inizializzarlo?</h4>
+                    <pre>
+                        <code>Yarn init</code>
+                    </pre>
+                    <img src="lib/img/yarn-init.png" alt="">
+                </div>
+            </section>
+            <section>
+                <h4>Come integrarlo in un progetto già avviato?</h4>
+                <pre>
+                    <code>Yarn install</code>
+                </pre>
+                <p>Come detto prima, dato che Yarn veste la maschera di "ottimizzatore", si affida principalmente allo stesso package.json di Npm</p>
+            </section>
+            <section>
                 <h4>Come funziona?</h4>
                 <ol>
                     <li>
-                        <strong>RISOLUZIONE</strong>
+                        <strong>RESOLUTION</strong>
                         <p>
                             Yarn inizia a risolvere le dipendenze facendo richieste ai registri e cercando ogni dipendenza ricorsivamente.
                         </p>
                     </li>
                     <li>
-                        <strong>RECUPERO</strong>
+                        <strong>FETCH</strong>
                         <p>
                             Yarn controlla nella cache globale se un pacchetto è stato già installato, in caso di esito negativo scarica il pacchetto e lo salva nella cache.
                         </p>
                     </li>
                     <li>
-                        <strong>COLLEGAMENTO</strong>
+                        <strong>LINK</strong>
                         <p>
                             Yarn copia tutti i file di cui ha bisogno dalla cache globale dentro la cartella <em>“node_modules”</em>.
                         </p>
@@ -152,11 +202,29 @@
             </section>
             <section>
                 <h4>Conclusione</h4>
-                <div class="text-sm">
+                <div class="text-sm" style="text-align:justify; line-height:1.6;">
                     Anche se le premesse che offre Yarn sono ottime, il mondo degli utilizzatori di package manager è spaccato a metà (come sempre in presenza di novità di cui ancora non si conosce a fondo la funzionalità). La mia idea è che può diventare un ottimo strumento nel caso in cui si debbano mettere le mani in progetti di rilevante entità; in caso contrario punterei ancora su NPM fino a che Yarn non avrà preso abbastanza piede da avere una sicura base di sostenitori e risolutori di bug (anche se nell’effettivo ha ottenuto più statistiche positive in 4 giorni di vita rispetto alla secolare presenza di npm).
                 </div>
                 <br>
                 <strong class="fragment">Polymer sta migrando a Yarn!</strong>
+            </section>
+            <section>
+                <div class="col-6">
+                    <h4>Link utili</h4>
+                    <ul>
+                        <li><a href="https://yarnpkg.com/">Yarn website</a></li>
+                        <li><a href="https://github.com/yarnpkg/yarn/">Yarn github</a></li>
+                        <li><a href="https://yarnpkg.com/en/docs/migrating-from-npm">Migrating from npm</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h4>Credits</h4>
+                    <ul>
+                        <li><a href="https://code.facebook.com/posts/1840075619545360">Yarn: A new package manager for JavaScript</a></li>
+                        <li><a href="https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm">Yarn Package Manager: An Improvement over npm</a></li>
+                        <li><a href="https://dev.to/bugsnag/replacing-npm-with-yarn">Replacing npm with Yarn</a></li>
+                    </ul>
+                </div>
             </section>
             <!-- /SECTION -->
         </div>
