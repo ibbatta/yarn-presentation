@@ -39,8 +39,12 @@ body {
 .reveal {
     font-family: 'Open Sans', sans-serif;
     font-size: 38px;
-    font-weight: 400;
+    font-weight: 300;
     color: rgba(15, 15, 15, 1);
+}
+
+.reveal * {
+    font-family: 'Open Sans', sans-serif;
 }
 
 ::selection {
@@ -53,6 +57,11 @@ body {
 .reveal .slides > section > section {
     line-height: 1.3;
     font-weight: inherit;
+}
+
+.reveal .text-sm {
+    font-size: 0.7em;
+    font-weight: 100;
 }
 
 
@@ -78,6 +87,7 @@ body {
 .reveal h1 {
     font-size: 2.5em;
     font-weight: 100;
+    text-shadow: none;
 }
 
 .reveal h2 {
@@ -87,14 +97,12 @@ body {
 
 .reveal h3 {
     font-size: 1.3em;
+    font-weight: 400;
 }
 
 .reveal h4 {
     font-size: 1em;
-}
-
-.reveal h1 {
-    text-shadow: none;
+    font-weight: 400;
 }
 
 
@@ -105,6 +113,12 @@ body {
 .reveal p {
     margin: 20px 0;
     line-height: 1.3;
+    font-size: 0.7em;
+}
+
+.reveal .col-6 {
+    float: left;
+    width: 50%;
 }
 
 
@@ -115,6 +129,44 @@ body {
 .reveal iframe {
     max-width: 95%;
     max-height: 95%;
+}
+
+.reveal img.fragment.visible {
+    transform: translate3d(0, 0, 0) scale(1, 1);
+    -webkit-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.reveal img.fragment:nth-child(1) {
+    transform: translate3d(-100px, 100px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(2) {
+    transform: translate3d(50px, -200px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(3) {
+    transform: translate3d(300px, 250px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(4) {
+    transform: translate3d(100px, -100px, 0) scale(2.5, 2.5);
+}
+
+.reveal img.fragment:nth-child(5) {
+    transform: translate3d(250px, -400px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(6) {
+    transform: translate3d(100px, 100px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(7) {
+    transform: translate3d(150px, -150px, 0) scale(1, 1);
+}
+
+.reveal img.fragment:nth-child(8) {
+    transform: translate3d(-450px, 200px, 0) scale(1, 1);
 }
 
 .reveal strong,
@@ -159,6 +211,15 @@ body {
     margin-left: 40px;
 }
 
+.reveal li {
+    font-size: 0.5em;
+    margin: 2em auto;
+}
+
+.reveal ol li {
+    font-size: 0.7em;
+}
+
 .reveal dt {
     font-weight: bold;
 }
@@ -190,6 +251,17 @@ body {
 
 .reveal q {
     font-style: italic;
+}
+
+.reveal cite {
+    background-color: rgba(15, 15, 15, 0.05);
+    padding: 0.2em 1em;
+    border-left: 5px solid rgba(15, 15, 15, 0.2);
+    color: rgba(15, 15, 15, 0.3);
+    font-size: 0.5em;
+    font-style: italic;
+    display: block;
+    text-align: left;
 }
 
 .reveal pre {
@@ -299,8 +371,9 @@ body {
 .reveal section img {
     margin: 15px 0px;
     background: rgba(255, 255, 255, 0.12);
-    border: 4px solid rgba(15, 15, 15, 0.7);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    /*border: 4px solid rgba(15, 15, 15, 0.7);*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);*/
+    vertical-align: middle;
 }
 
 .reveal section img.plain {

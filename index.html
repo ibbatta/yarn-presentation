@@ -38,10 +38,125 @@
             <!-- SECTION TO MANAGE SLIDE -->
             <section>
                 <h1>Jobrapido</h1>
-                <h2>HTML presentation slider</h2>
+                <h2>Say hello to Yarn</h2>
             </section>
             <section>
-                <p>Demo and Docs on <a href="https://github.com/hakimel/reveal.js">Github</a></p>
+                <h4>Cosa sono i package manager?</h4>
+                <cite>
+                    Strumenti che consentono di installare e gestire moduli esterni per fornire funzionalità aggiuntive al sistema di base.
+                </cite>
+                <div class="image-container">
+                    <img class="fragment" data-fragment-index="1" width="75" src="lib/img/battle.jpg">
+                    <img class="fragment" data-fragment-index="2" width="75" src="lib/img/bower.png">
+                    <img class="fragment" data-fragment-index="3" width="75" src="lib/img/component.png">
+                    <img class="fragment" data-fragment-index="8" width="75" src="lib/img/npm.png">
+                    <img class="fragment" data-fragment-index="4" width="150" src="lib/img/duo.png">
+                    <img class="fragment" data-fragment-index="5" width="75" src="lib/img/jspm.png">
+                    <img class="fragment" data-fragment-index="6" width="75" src="lib/img/gem.ico">
+                    <img class="fragment" data-fragment-index="7" width="75" src="lib/img/pip.png">
+                </div>
+            </section>
+            <section>
+                <div class="col-6">
+                    <h4>PRO</h4>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">
+                            Metodo uniforme per installare i pacchetti e tenerne traccia.
+                        </li>
+                        <li class="fragment" data-fragment-index="2">
+                            Popolarità: vi sono migliaia di pacchetti disponibili.
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            Si evita di riscrivere parti di codice utilizzando qualcosa di funzionante, pronto e testato.
+                            <br>
+                            <span class="fragment" data-fragment-index="4"><em>(in teoria)</em></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h4>CONTRO</h4>
+                    <ul>
+                        <li class="fragment" data-fragment-index="5">
+                            Rischio di trovare documentazioni incomplete o errate.
+                        </li>
+                        <li class="fragment" data-fragment-index="6">
+                            Conflitti fra sottomoduli: durante l'installazione di un modulo, npm installa anche eventuali altri moduli da cui il modulo installato dipende, utilizzando una struttura gerarchica descritta in un file package.json.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="col-6">
+                    <h4>Se siete fortunati...</h4>
+                    <img width="100%" src="lib/img/npm-screen-short.png" alt="">
+                </div>
+                <div class="col-6 fragment">
+                    <h4 style="text-align:left;">... vs. Real life</h4>
+                    <img width="100%" src="lib/img/npm-screen-long.png" alt="">
+                </div>
+            </section>
+            <section>
+                <div class="col-6">
+                    <h4>vanilla NPM</h4>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">
+                            Il client NPM installa le dipendenze in una cartella <em>(node_modules)</em> in maniera “non deterministica”: significa che l’ordine delle dipendenze installate può variare da persona a persona.
+                            <br>Queste differenze possono causare problemi e bug che possono richiedere anche parecchio tempo per il fix.
+                        </li>
+                        <li class="fragment" data-fragment-index="2">
+                            NPM prende le dipendenze solo dalla sua repository e le installa una alla volta, impiegando parecchio tempo.
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            Non consente l’installazione offline.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <h4>NPM + YARN</h4>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">
+                            Grazie a “lockfiles” e algoritmi, il client YARN permette di installare le dipendenze in maniera “deterministica”. I lockfiles permettono di bloccare a una specifica versione le dipendenze installate e garantisce che ogni installazione sia uguale in ogni macchina (risolve le differenze di installazione da persona a persona).
+                        </li>
+                        <li class="fragment" data-fragment-index="2">
+                            YARN permette installazioni di dipendenze in parallelo, sfruttando non solo i registri di NPM, ma anche quelli di BOWER.
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            Permette di mettere in cache eventuali pacchetti già installati, facilitando l’installazione offline.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4>Come funziona?</h4>
+                <ol>
+                    <li>
+                        <strong>RISOLUZIONE</strong>
+                        <p>
+                            Yarn inizia a risolvere le dipendenze facendo richieste ai registri e cercando ogni dipendenza ricorsivamente.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>RECUPERO</strong>
+                        <p>
+                            Yarn controlla nella cache globale se un pacchetto è stato già installato, in caso di esito negativo scarica il pacchetto e lo salva nella cache.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>COLLEGAMENTO</strong>
+                        <p>
+                            Yarn copia tutti i file di cui ha bisogno dalla cache globale dentro la cartella <em>“node_modules”</em>.
+                        </p>
+                    </li>
+                </ol>
+                <img src="lib/img/yarn.gif" alt="">
+            </section>
+            <section>
+                <h4>Conclusione</h4>
+                <div class="text-sm">
+                    Anche se le premesse che offre Yarn sono ottime, il mondo degli utilizzatori di package manager è spaccato a metà (come sempre in presenza di novità di cui ancora non si conosce a fondo la funzionalità). La mia idea è che può diventare un ottimo strumento nel caso in cui si debbano mettere le mani in progetti di rilevante entità; in caso contrario punterei ancora su NPM fino a che Yarn non avrà preso abbastanza piede da avere una sicura base di sostenitori e risolutori di bug (anche se nell’effettivo ha ottenuto più statistiche positive in 4 giorni di vita rispetto alla secolare presenza di npm).
+                </div>
+                <br>
+                <strong class="fragment">Polymer sta migrando a Yarn!</strong>
             </section>
             <!-- /SECTION -->
         </div>
@@ -90,6 +205,7 @@
                 async: true
             }]
         });
+
     })();
     </script>
 </body>
