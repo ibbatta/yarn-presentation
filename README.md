@@ -6,7 +6,7 @@ This is a html presentation about Yarn that I made for my company in order to sh
 
 ## __What is inside__
 
-I use [Reveal.js](https://github.com/hakimel/reveal.js) framework to build it.<br>
+I used [Reveal.js](https://github.com/hakimel/reveal.js) framework to build it.<br>
 (slides are written in italian)
 
 ---
