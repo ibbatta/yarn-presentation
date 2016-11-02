@@ -29,3 +29,26 @@ The Gruntfile expose these tasks:
 ## __To do__
 
 - [ ] English translation
+
+---
+
+## __Contributing__
+
+- Fork it!
+- Create your feature branch: `git checkout -b my-new-feature`
+- Commit your changes: `git commit -am 'Add some feature'`
+- Push to the branch: `git push origin my-new-feature`
+- Submit a pull request
+
+---
+
+## __Credits__
+
+- [Yarn Website page](https://yarnpkg.com/)
+- [Yarn Github page](https://github.com/yarnpkg/yarn/)
+- [How to migrate from Npm](https://yarnpkg.com/en/docs/migrating-from-npm)
+- [Yarn: A new package manager for JavaScript](https://code.facebook.com/posts/1840075619545360) (blog article)
+- [Yarn Package Manager: An Improvement over Npm](https://scotch.io/tutorials/yarn-package-manager-an-improvement-over-npm) (blog article)
+- [Replacing Npm with Yarn](https://dev.to/bugsnag/replacing-npm-with-yarn) (blog article)
+
+---
