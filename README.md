@@ -1,12 +1,16 @@
-# YARN PRESENTATION
+# __YARN HTML PRESENTATION__
 
-This is a slide presentation about Yarn that I made for my company.<br>
-I use [Reveal.js](https://github.com/hakimel/reveal.js) framework to build it
-
-Check the [WIKI](https://github.com/ibbatta/yarn-presentation/wiki/How-to) to know how to use the slider
+This is a html presentation about Yarn that I made for my company in order to show pro and cons to integrate inside an internal project.
 
 ---
 
-### To do
+## __What is inside__
+
+I use [Reveal.js](https://github.com/hakimel/reveal.js) framework to build it.<br>
+(slides are written in italian)
+
+---
+
+## __To do__
 
 - [ ] English translation
